@@ -11,7 +11,7 @@ window.onload = setTimeout(() => {
     add_str('resolution', screen.width + 'x' + screen.height + 'x' + screen.pixelDepth)
     add_str('timezone', 'GMT' + new Date().getTimezoneOffset() / 60)
     add_str('plugins', get_plugins())
-}, 0)
+}, 200)
 
 function get_plugins() {
     let plugins = ''
