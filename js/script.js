@@ -14,4 +14,4 @@ window.onload = setTimeout(() => {
     for (let i = 0; i < navigator.plugins.length; i++)
         plugins += navigator.plugins[i].name
     add_str('plugins', plugins)
-}, 0)
+}, 500)
