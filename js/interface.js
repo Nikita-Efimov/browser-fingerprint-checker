@@ -1,8 +1,11 @@
 function add_str(head, body) {
     let dd = document.createElement('dd')
-    let dt = document.createElement('dt')
     dd.innerHTML = head
+    let dt = document.createElement('dt')
     dt.innerHTML = body
-    container.appendChild(dd)
-    container.appendChild(dt)
+    let div = document.createElement('div')
+    div.classList.add('note-cont')
+    div.appendChild(dd)
+    div.appendChild(dt)
+    container.appendChild(div)
 }
