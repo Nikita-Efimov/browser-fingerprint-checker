@@ -1,5 +1,5 @@
 window.onload = setTimeout(() => {
-    var user = detect.parse(navigator.userAgent);
+    let user = detect.parse(navigator.userAgent);
 
     add_str('browser', user.browser.family + ' ' + user.browser.version)
     add_str('os', user.os.name)
@@ -10,8 +10,12 @@ window.onload = setTimeout(() => {
     add_str('are cookies enabled?', navigator.cookieEnabled)
     add_str('resolution', screen.width + 'x' + screen.height + 'x' + screen.pixelDepth)
     add_str('timezone', 'GMT' + new Date().getTimezoneOffset() / 60)
+    add_str('plugins', get_plugins())
+}, 0)
+
+function get_plugins() {
     let plugins = ''
     for (let i = 0; i < navigator.plugins.length; i++)
         plugins += navigator.plugins[i].name
-    add_str('plugins', plugins)
-}, 500)
+    return plugins
+}
