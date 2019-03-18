@@ -1,3 +1,15 @@
+section {
+    margin-left: 40%;
+}
+
+dd, dt {
+    font-size: 13pt;
+}
+
 dd {
     font-weight: bold;
+}
+
+dt {
+
 }
