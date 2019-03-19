@@ -1,4 +1,8 @@
-window.onload = setTimeout(() => {
+window.onload = () => {
+    print()
+}
+
+function print() {
     let user = detect.parse(navigator.userAgent);
 
     add_str('browser', user.browser.family + ' ' + user.browser.version)
@@ -11,7 +15,7 @@ window.onload = setTimeout(() => {
     add_str('resolution', screen.width + 'x' + screen.height + 'x' + screen.pixelDepth)
     add_str('timezone', 'GMT' + new Date().getTimezoneOffset() / 60)
     add_str('plugins', get_plugins())
-}, 200)
+}
 
 function get_plugins() {
     let plugins = ''

@@ -13,3 +13,7 @@ function add_str(head, body) {
     div.appendChild(dt)
     container.appendChild(div)
 }
+
+function clear() {
+    container.innerHTML = ''
+}
