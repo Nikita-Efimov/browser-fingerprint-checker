@@ -15,6 +15,13 @@ function print() {
     add_str('resolution', screen.width + 'x' + screen.height + 'x' + screen.pixelDepth)
     add_str('timezone', 'GMT' + new Date().getTimezoneOffset() / 60)
     add_str('plugins', get_plugins())
+    print_geolocation()
+}
+
+function print_geolocation() {
+    $.getJSON('http://ipinfo.io', (data) => {
+        add_str('geolocation and ip', data.country + '<br/>' + data.ip)
+    });
 }
 
 function get_plugins() {
