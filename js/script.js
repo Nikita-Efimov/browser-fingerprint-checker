@@ -19,7 +19,7 @@ function print() {
 }
 
 function print_geolocation() {
-    $.getJSON('http://ipinfo.io', (data) => {
+    $.getJSON('https://ipinfo.io', (data) => {
         add_str('geolocation and ip', data.country + '<br/>' + data.ip)
     });
 }
