@@ -15,6 +15,8 @@ function print() {
     add_str('resolution', screen.width + 'x' + screen.height + 'x' + screen.pixelDepth)
     add_str('timezone', 'GMT' + new Date().getTimezoneOffset() / 60)
     add_str('plugins', get_plugins())
+    add_str('WEB RTC', 'don\'t forget to block it')
+    add_str('Canvas', 'don\'t forget to block it')
     print_geolocation()
 }
 
